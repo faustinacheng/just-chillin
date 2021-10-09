@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Let's chill
+{% endblock %}
+
+{% block content %}
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-dark" style="color:white">
+        Filter box
+        <br>
+        <br>
+        Events
+        <br>
+        <br>
+        <a href="{{ url_for("create_event") }}">Host an Event</a>
+    </div>
+{% endblock %}

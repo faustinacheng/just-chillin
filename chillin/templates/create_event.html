@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Host a Chillin
+{% endblock %}
+
+{% block content %}
+    <body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:#fff">
+            {{ form.hidden_tag() }}
+
+            <h1 class="h3 mb-3 font-weight-normal">
+                Enter your event details!
+            </h1>
+            <br>
+            {{ form.title.label() }}
+            {{ form.title(class="form-control", placeholder="Title") }}
+
+            {{ form.description.label() }}
+            {{ form.description(class="form-control", placeholder="Description") }}
+
+            {{ form.location.label() }}
+            {{ form.location(class="form-control", placeholder="Location") }}
+
+            {{ form.time.label() }}
+            {{ form.time(class="form-control") }}
+
+            {{ form.group_size.label() }}
+            {{ form.group_size(class="form-control") }}
+
+            {{ form.mode.label() }}
+            {{ form.mode(class="form-control") }}
+
+            <br>
+
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+    </body>
+{% endblock %}
